@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+
+    <!-- Page title -->
+    <title>DJ DEXTY</title>
+
+    <!-- Meta data -->
+    <meta charset="UTF-8">
+    <meta name="description" content="DJ DEXTY - Web stránka">
+    <meta name="keywords" content="DJ, DJ DEXTY, events, show, booking, club">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link href="../Dexty Website (bart)/dexty/favicomatic/favicon.ico" rel="shortcut icon"/>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css"/>
+
+</head>
+<body>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Header section -->
+    <header id="header">
+       <img src="../Dexty Website (bart)/dexty/logo.png" width="200px"><a href="../Dexty Website (bart)/index.html" class="logo"></a></img>
+        <div class="header-menu">
+                <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#music">MUSIC</a></li>
+                    <li><a href="#performance">SHOWS</a></li>
+                    <li><a href="#booking">BOOKING</a></li>
+                </ul>
+        </div>
+    </header>
+
+    <!-- Section - Home -->
+    <section class="section">
+        <div class="container">
+            <div class="intro">
+                <h1>DEXTY</h1>
+                <h2>DJ & Producer</h2>
+                <p>
+                    Dexty is a DJ & Music Producer from Košice, Slovakia. He currently works as a resident DJ in 4 venues.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section - About -->
+    <a name="about"></a>
+    <img src="../Dexty Website (bart)/dexty/story.jpg" width="550px" class="story">
+    <section class="section section-white">
+        <div class="container">
+            <div class="about">
+                <h2>THE STORY</h2>
+                <p><strong>Daniel Rolák (professionally known as Dexty)</strong> is a 17-year-old DJ from Košice, Slovakia. He began to devote himself to music at the age of 14 as a beatmaker, later he became interested in DJing. At the age of 15, he decided to become a DJ.</p>
+                <p>He played his first show at the Piano Club in Košice. After this show, he decided to play all over Slovakia. When he was 16, he played events in more than 20 cities. He also participated as a DJ at the Vibe Festival. </p>
+                <p>He currently works as a resident DJ in the following clubs: Boba Bar Košice, Jazz Caffé Košice, Zlatý Dvor Košice, Meduza Prešov.
+                    In a short time, Dexty managed to play more than 80 events and also acts as a DJ for a Slovak rapper named Deelay. Together they played concerts alongside names like Separ, Gleb, Ego, Pil C, etc.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section - Music -->
+    <a name="music"></a>
+    <section class="section section-music">
+        <div class="container">
+            <h3>MUSIC</h3>
+            <ul class="cards">
+                <li>
+                    <span>DJ SETS</span>
+                    <p></p>
+                </li>
+                <li>
+                    <span>LOOPKITS / SAMPLEPACKS</span>
+                    <p><iframe width="350" height="260" src="https://www.youtube.com/embed/0rqg5I46E0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+                </li>
+                <li>
+                    <span>BEATS</span>
+                    <p></p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section - Gigs -->
+    <a name="performance"></a>
+    <section class="section section-gallery">
+        <div class="container text-center">
+            <h3>PERFORMANCE</h3>
+            <div class="gallery">
+                <div class="image"><img src="../Dexty Website (bart)/dexty/meduza.jpg" alt=""></div>
+                <div class="image"><img src="../Dexty Website (bart)/dexty/tabacka.jpeg" alt=""></div>
+                <div class="image"><img src="../Dexty Website (bart)/dexty/killshot.jpg" alt=""></div>
+                <div class="image"><img src="../Dexty Website (bart)/dexty/crowd.jpg" alt=""></div>
+                <div class="image"><img src="../Dexty Website (bart)/dexty/nitra.jpg" alt=""></div>
+                <div class="image"><img src="../Dexty Website (bart)/dexty/smoke.jpeg" alt=""></div>
+            </div>
+            <div class="popup-image">
+                <span>&times;</span>
+                <img src="../Dexty Website (bart)/dexty/meduza.jpg" alt="">
+            </div>
+        </div>
+
+    </section>
+    <script>
+    document.querySelectorAll('.gallery img').forEach(image =>{
+        image.onclick = () =>{
+            document.querySelector('.popup-image').style.display = 'block';
+            document.querySelector('.popup-image img').src = image.getAttribute('src');
+        }
+    });
+    document.querySelector('.popup-image').onclick = () =>{
+        document.querySelector('.popup-image').style.display = 'none';
+    }
+    </script>
+
+    <!-- Section - Booking -->
+    <a name="booking"></a>
+    <section class="section section-silver">
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+          
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+          
+            <input type="submit" value="Book Now">
+          </form>          
+        <div class="container">
+            <div class="booking">
+                <h3>BOOKING</h3>
+                <p>
+                    <strong>DEXTY</strong><br />
+                    Franckova 6<br />
+                    04001 Košice<br />
+                    Slovakia<br />
+                    <br />
+                    <strong>Phone</strong>: +421 949 888 127<br />
+                    <strong>Email</strong>: dextybeatz@gmail.com<br />
+                    <br />
+                    <a class="instagram-icon" href="https://www.instagram.com/1dexty_/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a class="facebook-icon" href="https://www.facebook.com/dexxtyy?locale=sk_SK" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a class="youtube-icon" href="https://www.youtube.com/channel/UCGXXeyocYoZ7tqkYYGaK5qQ" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
+                    <a class="tiktok-icon" href="https://www.tiktok.com/@1dexty_" target="_blank"><ion-icon name="logo-tiktok"></ion-icon></a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer id="footer">
+        <div class="container text-center">
+            <ul class="footer-menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#performance">Shows</a></li>
+                <li><a href="#booking">Booking</a></li>
+            </ul>
+            <div class="copyright">
+                <small>Copyright &copy; 2023 All rights reserved</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascripts -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
